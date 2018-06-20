@@ -9,3 +9,4 @@ if [ -f /etc/issue ]; then
 else
   sed -i "" 's/robbyrussell/af-magic/g' $home/.zshrc
 fi
+source ~/.zshrc
