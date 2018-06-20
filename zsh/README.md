@@ -5,8 +5,7 @@ curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/install_zsh.s
 
 # 安装 zsh-high-light-syntax; 并尝试自动配置到 .zshrc
 ```
-curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/zsh_highlight_centos.sh | sh
-curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/zsh_highlight_osx.sh | sh
+curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/zsh_syntax_highlighting.sh | sh
 ```
 
 # 安装 vim 配色, 注意是 vim , centos 自带的 vi 似乎不管用?
