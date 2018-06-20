@@ -12,3 +12,8 @@ curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/zsh_syntax_hi
 ```
 curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/vi_install_and_solarized.sh | sh
 ```
+
+# 一键上面三个
+```
+curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/one_zsh.sh | sh
+```
