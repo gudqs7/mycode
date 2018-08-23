@@ -51,7 +51,7 @@ func getReq(r R, c chan int, num int){
 			url += k + "=" + v + "&"
 		}
 		url = url[0:len(url)-1]
-		fmt.Printf("No.%d: Times:%d Info:%s\n", num, count, url)
+		
 		count++
 
 		client := &http.Client{}
@@ -78,7 +78,7 @@ func getReq(r R, c chan int, num int){
 		if err != nil {
 			// handle error
 		}
-		fmt.Printf("No.%d: Times:%d Info:%s\n", num, count, string(body))
+		fmt.Printf("No.%d: Times:%d Info:%s : %s\n", num, count, url, string(body))
 	}
 	c <- 0
 }
@@ -94,7 +94,6 @@ func getReq2(r R, c chan int, num int){
 		url += k + "=" + v + "&"
 	}
 	url = url[0:len(url)-1]
-	fmt.Printf("No.%d: Info:%s\n", num, url)
 
 	client := &http.Client{}
 	//提交请求
@@ -120,6 +119,6 @@ func getReq2(r R, c chan int, num int){
 	if err != nil {
 		// handle error
 	}
-	fmt.Printf("No.%d: Info:%s\n", num, string(body))
+	fmt.Printf("No.%d: Times:%d Info:%s : %s\n", num, count, url, string(body))
 	c <- 0
 }
