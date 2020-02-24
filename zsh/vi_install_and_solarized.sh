@@ -10,3 +10,7 @@ set background=dark
 colorscheme solarized
 EOF
 
+sudo mv /bin/vi /bin/vibak
+sudo ln -s /bin/vim /bin/vi
+
+rm -rf vim-colors-solarized

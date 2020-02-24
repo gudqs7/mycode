@@ -18,7 +18,13 @@ curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/vi_install_an
 curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/one_zsh.sh | sh
 ```
 
-# 附送 GIT 缩写别名
+# GIT 缩写别名
 ```
 curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/git/git-alias.sh | sh
+```
+
+
+# GIT 升级版本
+```
+curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/update_git.sh | sh
 ```
