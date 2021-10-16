@@ -1,4 +1,12 @@
-#!/bin/bash
+A="$1"
+B="$2"
+
+echo "输入的原始值：A=$A,B=$B"
+
+#判断字符串是否相等
+if [ x"$A" = x"$B" ];then
+echo "[ = ]"
+fi
 
 release="centos"
 
@@ -20,36 +28,13 @@ else
     release=""
 fi
 
-
-if [[ x"${release}" == x"centos" ]]; then
-    mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
-    curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-
-    sudo yum update -y
+if [[ $release == "centos" ]]
+then
     echo '-----------------Update Finished. Start Install-----------------'
-
-    yum install -y zsh git vim
-    
-elif [[ x"${release}" == x"debian" || x"${release}" == x"ubuntu" ]]; then
-    sudo apt-get update -y
+elif [[ $release == "debian" || $release == "ubuntu" ]]
+then     
     echo '-----------------Update Finished. Start Install-----------------'
-
-    sudo apt-get install -y zsh git vim
-    
 else
     v=`cat /proc/version`
     echo "Unknown Linux Release: ${v}"
 fi
-
-curl -L https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
-
-chsh -s /bin/zsh
-
-home=`echo ~`
-if [ -f /etc/issue ]; then
-  sed -i 's/robbyrussell/af-magic/g' $home/.zshrc
-else
-  sed -i "" 's/robbyrussell/af-magic/g' $home/.zshrc
-fi
-
-source $home/.zshrc
