@@ -31,7 +31,7 @@ curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/update_git.sh
 
 # 设置 PROXY
 ```bash
-export all_proxy="socks5://127.0.0.1:10808"
+export all_proxy="http://127.0.0.1:10809"
 
 curl cip.cc
 unset all_proxy
