@@ -44,6 +44,7 @@ fi
 curl -L https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 
 chsh -s /bin/zsh
+zsh
 
 home=`echo ~`
 if [ -f /etc/issue ]; then

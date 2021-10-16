@@ -15,6 +15,7 @@ curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/vi_install_an
 
 # 一键上面三个
 ```
+sudo ls
 curl -L https://raw.githubusercontent.com/gudqs7/mycode/master/zsh/one_zsh.sh | bash
 ```
 
