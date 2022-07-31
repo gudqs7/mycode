@@ -22,6 +22,7 @@ fi
 
 
 if [[ x"${release}" == x"centos" ]]; then
+    # 设置镜像源
     mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
     curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
@@ -31,6 +32,9 @@ if [[ x"${release}" == x"centos" ]]; then
     yum install -y zsh git vim
     
 elif [[ x"${release}" == x"debian" || x"${release}" == x"ubuntu" ]]; then
+    # 设置镜像源
+    cp /etc/apt/sources.list /etc/apt/sources.list.bak
+    sed -i 's/http:\/\/.*\.ubuntu\.com/http:\/\/mirrors.aliyun.com/g' /etc/apt/sources.list
     sudo apt-get update -y
     echo '-----------------Update Finished. Start Install-----------------'
 
