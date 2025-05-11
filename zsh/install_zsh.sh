@@ -46,7 +46,7 @@ else
     exit 1
 fi
 
-curl -L https://gitcode.net/mirrors/ohmyzsh/ohmyzsh/-/raw/master/tools/install.sh | sh
+curl -L https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 
 chsh -s /bin/zsh
 zsh
